@@ -1,4 +1,3 @@
-import pandas as pd
 
 def clean_per_game_data(df):
     # Supprimer les colonnes inutiles
@@ -62,9 +61,6 @@ def clean_conference_standings_data(df, conference_name):
         'PA/G': 'Points Allowed per Game',
         'SRS': 'Simple Rating System'
     }, inplace=True)
-
-    # Ajouter une nouvelle colonne pour le nom de la conférence
-    df['Conference'] = conference_name
 
     # Remplir les données manquantes dans 'Win/Loss Percentage' avec 0.0
     if 'Win/Loss Percentage' in df.columns:
